@@ -1,0 +1,249 @@
+{% extends "layout.html" %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <section class="title-section">
+    <div class="background-image"></div>
+    <div class="title-content">
+      <h1>Meet the Team</h1>
+    </div>
+  </section>
+  
+  <div class="team-section">
+
+    <div class="team-member">
+      <div class="pic">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/bushra-official.jpeg" alt="Member 1">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/bushra-silly.jpeg" alt="Member 1 Hover" class="hover-image">
+      </div>
+      <div class="text">
+        <h>
+          Bushra Islam
+        </h>
+      </div>
+      <div class="blurb">
+        <p>This is a sample blurb.</p>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <div class="pic">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/aarush-official.jpg" alt="Member 2" >
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/aarush-silly.jpg" alt="Member 2 Hover" class="hover-image">
+      </div>
+      <div class="text">Aarush Mehta</div>
+    </div>
+
+    <div class="team-member">
+      <div class="pic">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/trinityofficial.jpeg" alt="Member 3">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/trinitysilly.jpeg" alt="Member 3 Hover" class="hover-image">
+      </div>
+      <div class="text">Trinity Hausch</div>
+    </div>
+    
+
+    <div class="team-member">
+      <div class="pic">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/grace-official.jpeg" alt="Member 3">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/grace-silly.jpeg" alt="Member 3 Hover" class="hover-image">
+      </div>
+      <div class="text">Grace Ding</div>
+    </div>
+
+    <div class="team-member">
+      <div class="pic">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/jayden-official.jpeg" alt="Member 3">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/jayden-silly.jpeg" alt="Member 3 Hover" class="hover-image">
+      </div>
+      <div class="text">Jayden Riley</div>
+    </div>
+
+    <div class="team-member">
+      <div class="pic">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/michelle-official.jpeg" alt="Member 3">
+        <img src="https://static.igem.wiki/teams/4647/wiki/team/michelle-silly.jpeg" alt="Member 3 Hover" class="hover-image">
+      </div>
+      <div class="text">Michelle Yang</div>
+    </div>
+
+  </div>
+
+
+  <style>
+    /*title image styling*/
+
+  body {
+    
+    background: #011a01;
+  }
+
+
+.title-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  
+.background-image {
+  
+
+    background-image: url('team\ ed.jpeg'); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center top;
+    /*height: 100vh; */
+}
+  
+  .title-content {
+    position: absolute;
+    top: 300px;
+    left: 500px;
+    
+    align-items: center;
+    justify-content: center;
+
+
+    
+    font-size: 50px; 
+   
+    
+    color: #acf1ff;
+  }
+  
+
+/*team member styling*/
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+
+   
+  }
+  
+  .team-member {
+    width: calc(33.33% - 50px); /* Adjust the width as per your requirements */
+    margin-bottom: 100px;
+    height: 600px;
+
+    position: relative;
+   
+
+  }
+  
+  .pic img {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+
+    
+    
+    
+  }
+  
+  .pic img.hover-image {
+    position: absolute;
+    
+    opacity: 0;
+
+    
+  }
+  
+  .pic:hover img {
+    opacity: 0;
+    
+  }
+  
+  .pic:hover img.hover-image {
+    opacity: 1;
+    
+  }
+
+
+ 
+.text {
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    top: 500px;
+    bottom: 0;
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: bold;
+    
+
+     
+    color: #acf1ff;
+   
+    
+  }
+
+  .blurb {
+ 
+  animation: fade-in 1s ease-in-out infinite alternate;
+}
+
+.blurb {
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    top: 550px;
+    bottom: 0;
+    text-align: center;
+
+    color: #acf1ff;
+   
+    font-size: 20px;
+
+    
+
+   
+  }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+  
+ 
+  </style>
+
+</body>
+
+</html>
+
+
+
+{% endblock %}
